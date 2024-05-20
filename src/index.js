@@ -98,7 +98,7 @@ function Pizza({ pizzaObj }) {
       <div className="pizza-info">
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
-        <strong>${pizzaObj.price}</strong>
+        <strong>{pizzaObj.soldOut ? "Sold Out" : `$${pizzaObj.price}`}</strong>
       </div>
     </div>
   );

@@ -132,6 +132,7 @@ header h1::after {
   display: block;
   font-size: 1.6rem;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .pizza-card.sold-out {
@@ -141,4 +142,31 @@ header h1::after {
 .pizza-card.sold-out img {
   filter: grayscale();
   opacity: 0.8;
+}
+
+/* Footer Section */
+footer {
+  font-size: 1.4rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.orderBtn {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  padding: 1.4rem 3.2rem;
+  background-color: #edc84b;
+  font-weight: 500;
+  transition: filter 0.2s;
+}
+
+.orderBtn:hover {
+  filter: brightness(95%);
 }
