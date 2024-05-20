@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -47,7 +48,19 @@ const pizzaData = [
 ];
 
 function App() {
-  return <h1>Hello React</h1>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <header>
+      <h1>Fast React Pizza Co.</h1>
+    </header>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
