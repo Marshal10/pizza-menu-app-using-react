@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.pizza-img img {
+  width: 12rem;
+  aspect-ratio: 1;
+  align-self: start;
+}

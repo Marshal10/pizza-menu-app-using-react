@@ -74,22 +74,24 @@ function Menu() {
         our stone oven, all organic, all delicious.
       </p>
       <div className="pizzas">
-        <Pizza />
+        {pizzaData.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
       </div>
     </main>
   );
 }
 
-function Pizza() {
+function Pizza({ pizzaObj }) {
   return (
     <div className="pizza-card">
       <div className="pizza-img">
-        <img src="pizzas/focaccia.jpg" alt="Focaccia Pizza"></img>
+        <img src={pizzaObj.photoName} alt={pizzaObj.name}></img>
       </div>
       <div className="pizza-info">
-        <h3>Focaccia</h3>
-        <p>Pizza descriptiion</p>
-        <strong>$6</strong>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <strong>${pizzaObj.price}</strong>
       </div>
     </div>
   );
