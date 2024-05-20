@@ -81,7 +81,18 @@ function Menu() {
 }
 
 function Pizza() {
-  return <h1>Pizza component here</h1>;
+  return (
+    <div className="pizza-card">
+      <div className="pizza-img">
+        <img src="pizzas/focaccia.jpg" alt="Focaccia Pizza"></img>
+      </div>
+      <div className="pizza-info">
+        <h3>Focaccia</h3>
+        <p>Pizza descriptiion</p>
+        <strong>$6</strong>
+      </div>
+    </div>
+  );
 }
 
 function Footer() {
