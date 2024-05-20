@@ -9,3 +9,12 @@
   aspect-ratio: 1;
   align-self: start;
 }
+
+.pizza-card.sold-out {
+  color: #888;
+}
+
+.pizza-card.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
+}
