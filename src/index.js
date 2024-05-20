@@ -52,6 +52,7 @@ function App() {
     <div className="container">
       <Header />
       <Menu />
+      <Footer />
     </div>
   );
 }
@@ -81,6 +82,22 @@ function Menu() {
 
 function Pizza() {
   return <h1>Pizza component here</h1>;
+}
+
+function Footer() {
+  const hours = new Date().getHours();
+  const openHours = 9;
+  const closeHours = 22;
+  const isOpen = hours >= openHours && hours <= closeHours;
+  return (
+    <footer>
+      <p>
+        We're open from {openHours} to {closeHours}.Come visit us or order
+        online
+      </p>
+      <button className="orderBtn">Order</button>
+    </footer>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
