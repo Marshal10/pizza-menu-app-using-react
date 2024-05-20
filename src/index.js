@@ -104,12 +104,24 @@ function Footer() {
   const isOpen = hours >= openHours && hours <= closeHours;
   return (
     <footer>
+      {isOpen ? (
+        <Order openHour={openHours} closeHour={closeHours} />
+      ) : (
+        <p>Sorry, we're closed</p>
+      )}
+    </footer>
+  );
+}
+
+function Order({ openHour, closeHour }) {
+  return (
+    <div className="order">
       <p>
-        We're open from {openHours} to {closeHours}.Come visit us or order
-        online
+        We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
+        online.
       </p>
       <button className="orderBtn">Order</button>
-    </footer>
+    </div>
   );
 }
 
