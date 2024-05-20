@@ -49,8 +49,9 @@ const pizzaData = [
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
+      <Menu />
     </div>
   );
 }
@@ -61,6 +62,25 @@ function Header() {
       <h1>Fast React Pizza Co.</h1>
     </header>
   );
+}
+
+function Menu() {
+  return (
+    <main className="menu">
+      <h2>Our Menu</h2>
+      <p>
+        Authentic Italian cuisine. 6 creative dishes to choose from. All from
+        our stone oven, all organic, all delicious.
+      </p>
+      <div className="pizzas">
+        <Pizza />
+      </div>
+    </main>
+  );
+}
+
+function Pizza() {
+  return <h1>Pizza component here</h1>;
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
